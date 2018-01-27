@@ -1,12 +1,13 @@
-ln -s ~/Dropbox/stuff/env/.zshrc ~/.zshrc
-ln -s ~/Dropbox/stuff/env/.aliases ~/.aliases
-ln -s ~/Dropbox/stuff/env/.functions ~/.functions
+ENV_PATH="~/Dropbox/stuff/env"
 
-ln -s ~/Dropbox/stuff/env ~/.envfiles
-ln -s ~/Dropbox/stuff/env/.gemrc ~/.gemrc
-ln -s ~/Dropbox/stuff/env/.gitconfig ~/.gitconfig
-ln -s ~/Dropbox/stuff/env/.gitignore ~/.gitignore
-ln -s ~/Dropbox/stuff/env/.irbrc ~/.irbrc
+ln -s $ENV_PATH ~/.envfiles
+ln -s $ENV_PATH/.zshrc ~/.zshrc
+ln -s $ENV_PATH/.aliases ~/.aliases
+ln -s $ENV_PATH/.functions ~/.functions
+ln -s $ENV_PATH/.gemrc ~/.gemrc
+ln -s $ENV_PATH/.gitconfig ~/.gitconfig
+ln -s $ENV_PATH/.gitignore ~/.gitignore
+ln -s $ENV_PATH/.irbrc ~/.irbrc
 
 ln -s ~/Dropbox/dev/oh-my-zsh .oh-my-zsh
 
@@ -17,4 +18,3 @@ ln -s ~/Dropbox/code ~/code
 ln -s ~/Dropbox/dev ~/dev
 ln -s ~/Dropbox/stuff ~/stuff
 ln -s ~/Dropbox/temp ~/temp
-

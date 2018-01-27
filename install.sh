@@ -1,20 +1,20 @@
-ENV_PATH="~/Dropbox/stuff/env"
+ENV_PATH=$HOME/Dropbox/stuff/env
 
-ln -s $ENV_PATH ~/.envfiles
-ln -s $ENV_PATH/.zshrc ~/.zshrc
-ln -s $ENV_PATH/.aliases ~/.aliases
-ln -s $ENV_PATH/.functions ~/.functions
-ln -s $ENV_PATH/.gemrc ~/.gemrc
-ln -s $ENV_PATH/.gitconfig ~/.gitconfig
-ln -s $ENV_PATH/.gitignore ~/.gitignore
-ln -s $ENV_PATH/.irbrc ~/.irbrc
+ln -sf $ENV_PATH ~/.envfiles
+ln -sf $ENV_PATH/.zshrc ~/.zshrc
+ln -sf $ENV_PATH/.aliases ~/.aliases
+ln -sf $ENV_PATH/.functions ~/.functions
+ln -sf $ENV_PATH/.gemrc ~/.gemrc
+ln -sf $ENV_PATH/.gitconfig ~/.gitconfig
+ln -sf $ENV_PATH/.gitignore ~/.gitignore
+ln -sf $ENV_PATH/.irbrc ~/.irbrc
 
-ln -s ~/Dropbox/dev/oh-my-zsh .oh-my-zsh
+ln -sf $HOME/Dropbox/dev/oh-my-zsh .oh-my-zsh
 
-ln -s ~/Dropbox/dev/vim/.vim .vim
-ln -s ~/Dropbox/dev/vim/.vimrc .vimrc
+ln -sf $HOME/Dropbox/dev/vim/.vim .vim
+ln -sf $HOME/Dropbox/dev/vim/.vimrc .vimrc
 
-ln -s ~/Dropbox/code ~/code
-ln -s ~/Dropbox/dev ~/dev
-ln -s ~/Dropbox/stuff ~/stuff
-ln -s ~/Dropbox/temp ~/temp
+ln -sf $HOME/Dropbox/code ~/code
+ln -sf $HOME/Dropbox/dev ~/dev
+ln -sf $HOME/Dropbox/stuff ~/stuff
+ln -sf $HOME/Dropbox/temp ~/temp

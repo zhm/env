@@ -1,0 +1,40 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = mvim -f
+[color]
+ branch = auto
+ diff = auto
+ status = auto
+[color "branch"]
+ current = magenta bold
+ local = blue
+ remote = green
+[color "diff"]
+ meta = yellow
+ frag = magenta
+ old = red
+ new = cyan
+[color "status"]
+ added = cyan
+ changed = green
+ untracked = red
+[user]
+	name = Zac McCormick
+	email = zac.mccormick@gmail.com
+	signingkey = 000D4627
+[github]
+	user = zhm
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

@@ -21,8 +21,18 @@ export FULCRUM_ANDROID=$HOME/dev/fulcrum-android
 export FULCRUM_SITE=$HOME/dev/fulcrumapp.com
 export FULCRUM_DEV_SITE=$HOME/dev/developer.fulcrumapp.com
 export FULCRUM_TILES=$HOME/dev/fulcrum_tiles
+export HOMEBREW_NO_AUTO_UPDATE=1
+export SKAFFOLD_CLEANUP=false
 
-plugins=(git ruby rails osx)
+export FULCRUM_HELPER_BRANCH=main
+export FULCRUM_UPDATE_PROFILE=no
+export FULCRUM_DEFAULT_CONTEXT=chaos
+export FULCRUM_PERMISSIONS_FULCRUM=Admin
+export FULCRUM_PERMISSIONS_CHAOS=Admin
+
+export GPG_TTY=$(tty)
+
+plugins=(git ruby rails osx fulcrum)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.functions
@@ -30,6 +40,8 @@ source ~/.aliases
 source-if-exists ~/.aws
 source-if-exists ~/.private
 
+# . $(brew --prefix asdf)/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 prepend-path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 prepend-path "$HOME/Downloads/android-ndk-r10e"
@@ -37,20 +49,23 @@ prepend-path "$ANDROID_SDK_PATH/platform-tools"
 prepend-path "/usr/local/share/python"
 prepend-path "/usr/local/sbin"
 prepend-path "/usr/local/bin"
-prepend-path "/usr/local/lib/ruby/gems/2.6.0/bin"
+prepend-path "/usr/local/lib/ruby/gems/3.0.0/bin"
+prepend-path "/usr/local/opt/python@3.9/libexec/bin"
 prepend-path "/usr/local/opt/ruby/bin"
 prepend-path "/usr/local/opt/qt/bin"
 prepend-path "/usr/local/opt/bison/bin" # for QGIS build
 prepend-path "$HOME/local/bin"
 prepend-path "$HOME/local/geotools/bin"
 prepend-path "$HOME/local/oclint/bin"
+prepend-path "$GOPATH/bin"
+prepend-path "$HOME/.rd/bin"
 # prepend-path "$HOME/dev/depot_tools"
-prepend-path "/usr/local/Cellar/asdf/0.7.2/bin"
+# prepend-path "/usr/local/Cellar/asdf/0.7.2/bin"
 # prepend-path "$HOME/.asdf/shims"
 append-path  "$ANDROID_SDK_PATH/tools"
 append-path  "$HOME/dev/sysadmin/bin"
-append-path  "$GOPATH/bin"
 append-path  "/usr/local/share/npm/bin"
+append-path  "$HOME/.cargo/bin"
 prepend-path "/usr/local/opt/node@12/bin"
 # append-path  "$DROPBOX_PATH/dev/depot_tools"
 

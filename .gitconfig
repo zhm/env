@@ -22,7 +22,7 @@
 [user]
 	name = Zac McCormick
 	email = zac.mccormick@gmail.com
-	signingkey = 000D4627
+	signingkey = 616A432F11D5FC0C
 [github]
 	user = zhm
 [difftool "Kaleidoscope"]
@@ -40,3 +40,7 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false

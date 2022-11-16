@@ -1,6 +1,36 @@
+function prc() {
+  mongoose && kubectl -n fulcrum-prod exec -it `rails-sidekiq-pod fulcrum-prod` -- bundle exec rails runner "require 'pry'; pry"
+}
+
+function prconsole() {
+  rails-bash $1
+}
+
+function create-bug() {
+  jira issue create --web --project FLCRM --type Bug --template ~/.jira-bug.tmpl
+}
 
 function git() {
   hub "$@"
+}
+
+function gtag() {
+  if [[ $1 = v* ]] then
+    TAG=$1
+  else
+    TAG="v$1"
+  fi
+
+  git tag -s -a $TAG -m '' && git push --tags
+}
+
+function pkversion() {
+node << EOS
+const fs = require('fs');
+try {
+  console.log(JSON.parse(fs.readFileSync('package.json').toString()).version);
+} catch (ex) {}
+EOS
 }
 
 function mediainfo() {

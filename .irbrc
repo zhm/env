@@ -1,6 +1,6 @@
 require "rubygems"
 
-print "Loading plugins..."
+# print "Loading plugins..."
 
 # require 'interactive_editor'
 # require 'map_by_method'
@@ -15,24 +15,24 @@ print "Loading plugins..."
 # Wirble.init
 # Wirble.colorize
 
-class Object
-  def local_methods(obj = self)
-    (obj.methods - obj.class.superclass.instance_methods).sort
-  end
+# class Object
+#   def local_methods(obj = self)
+#     (obj.methods - obj.class.superclass.instance_methods).sort
+#   end
 
-  # add a `p` method to all objects to pretty print
-  unless self.respond_to? :p
-    define_method :p do
-      ap self
-    end
-  end
+#   # add a `p` method to all objects to pretty print
+#   unless self.respond_to? :p
+#     define_method :p do
+#       ap self
+#     end
+#   end
 
-  unless self.respond_to? :t
-    define_method :t do
-      puts Hirb::Helpers::Table.render self.respond_to?(:length) ? self.to_a.map(&:as_json) : [self.as_json]
-    end
-  end
-end
+#   unless self.respond_to? :t
+#     define_method :t do
+#       puts Hirb::Helpers::Table.render self.respond_to?(:length) ? self.to_a.map(&:as_json) : [self.as_json]
+#     end
+#   end
+# end
 
 IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:PROMPT][:SIMPLE] = {
@@ -46,4 +46,4 @@ IRB.conf[:USE_READLINE] = true
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
-puts "Done"
+# puts "Done"

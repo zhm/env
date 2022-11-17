@@ -1,6 +1,9 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="zacmcc"
 
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+[ -f /usr/local/Homebrew/bin/brew ] && eval "$(/usr/local/Homebrew/bin/brew shellenv)"
+
 export EDITOR='mvim -f'
 export GIT_EDITOR='mvim -f'
 export DROPBOX_PATH=$HOME/Dropbox

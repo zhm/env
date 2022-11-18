@@ -36,6 +36,7 @@
 * Setup 1Password SSH agent
 * Remap caps lock to escape key in Modifier Keys
 * Modify key repeat speed to max
+* Import GPG key
 * Copy public/private key
 
 * /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

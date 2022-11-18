@@ -1,20 +1,16 @@
-ENV_PATH=$HOME/Dropbox/stuff/env
+#!/usr/bin/env bash
 
-# ln -s $ENV_PATH $HOME/.envfiles
-ln -s $ENV_PATH/.zshrc $HOME/.zshrc
-ln -s $ENV_PATH/.aliases $HOME/.aliases
-ln -s $ENV_PATH/.functions $HOME/.functions
-ln -s $ENV_PATH/.gemrc $HOME/.gemrc
-ln -s $ENV_PATH/.gitconfig $HOME/.gitconfig
-ln -s $ENV_PATH/.gitignore $HOME/.gitignore
-ln -s $ENV_PATH/.irbrc $HOME/.irbrc
+set -uo pipefail
 
-ln -s $HOME/Dropbox/dev/oh-my-zsh $HOME/.oh-my-zsh
+ENV_PATH=~/Documents/dev/env
 
-ln -s $HOME/Dropbox/dev/vim/.vim $HOME/.vim
-ln -s $HOME/Dropbox/dev/vim/.vimrc $HOME/.vimrc
-
-# ln -s $HOME/Dropbox/code $HOME/code
-# ln -s $HOME/Dropbox/dev $HOME/dev
-# ln -s $HOME/Dropbox/stuff $HOME/stuff
-# ln -s $HOME/Dropbox/temp $HOME/temp
+ln -sf $ENV_PATH/.zshrc ~/.zshrc
+ln -sf $ENV_PATH/.aliases ~/.aliases
+ln -sf $ENV_PATH/.functions ~/.functions
+ln -sf $ENV_PATH/.gemrc ~/.gemrc
+ln -sf $ENV_PATH/.gitconfig ~/.gitconfig
+ln -sf $ENV_PATH/.gitignore ~/.gitignore
+ln -sf $ENV_PATH/.irbrc ~/.irbrc
+ln -sf $ENV_PATH/.ackrc ~/.ackrc
+ln -sf $ENV_PATH/.vimrc ~/.vimrc
+ln -sf $ENV_PATH/.vim ~/.vim

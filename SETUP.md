@@ -44,16 +44,15 @@
 # ln -s ~/Documents/stuff ~/stuff
 # ln -s ~/Documents/temp ~/temp
 
-ln -s ~/Documents/dev/env/.zshrc ~/.zshrc
-ln -s ~/Documents/dev/env/.aliases ~/.aliases
-ln -s ~/Documents/dev/env/.functions ~/.functions
-ln -s ~/Documents/dev/env/.gemrc ~/.gemrc
-ln -s ~/Documents/dev/env/.gitconfig ~/.gitconfig
-ln -s ~/Documents/dev/env/.gitignore ~/.gitignore
-ln -s ~/Documents/dev/env/.irbrc ~/.irbrc
-ln -s ~/Documents/dev/env/.ackrc ~/.ackrc
+ln -sf ~/Documents/dev/env/.zshrc ~/.zshrc
+ln -sf ~/Documents/dev/env/.aliases ~/.aliases
+ln -sf ~/Documents/dev/env/.functions ~/.functions
+ln -sf ~/Documents/dev/env/.gemrc ~/.gemrc
+ln -sf ~/Documents/dev/env/.gitconfig ~/.gitconfig
+ln -sf ~/Documents/dev/env/.gitignore ~/.gitignore
+ln -sf ~/Documents/dev/env/.irbrc ~/.irbrc
+ln -sf ~/Documents/dev/env/.ackrc ~/.ackrc
+ln -sf ~/Documents/dev/env/.vimrc ~/.vimrc
+ln -sf ~/Documents/dev/env/.vim ~/.vim
 
 ln -s ~/Documents/dev/oh-my-zsh ~/.oh-my-zsh
-
-ln -s ~/Documents/dev/vim/.vimrc ~/.vimrc
-ln -s ~/Documents/dev/vim/.vim ~/.vim

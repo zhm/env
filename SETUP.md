@@ -35,6 +35,9 @@
 
 * Copy public/private key
 
+* /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+* git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+
 * brew install go
 * brew install --cask 1password/tap/1password-cli
 
@@ -54,5 +57,3 @@ ln -sf ~/Documents/dev/env/.irbrc ~/.irbrc
 ln -sf ~/Documents/dev/env/.ackrc ~/.ackrc
 ln -sf ~/Documents/dev/env/.vimrc ~/.vimrc
 ln -sf ~/Documents/dev/env/.vim ~/.vim
-
-ln -s ~/Documents/dev/oh-my-zsh ~/.oh-my-zsh

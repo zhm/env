@@ -16,3 +16,5 @@ ln -sf $ENV_PATH/.vimrc ~/.vimrc
 ln -sf $ENV_PATH/.vim ~/.vim
 
 ln -sf $ENV_PATH/zacmcc.zsh-theme ~/.oh-my-zsh/themes/zacmcc.zsh-theme
+
+ln -sf ~/Documents/dev ~/dev

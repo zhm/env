@@ -41,6 +41,9 @@
 * brew install go
 * brew install hub
 * brew install asdf
+* brew install node
+* brew install ruby
+* brew install python
 * brew install --cask 1password/tap/1password-cli
 
 * Install vscode

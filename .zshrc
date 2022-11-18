@@ -44,7 +44,7 @@ source-if-exists ~/.aws
 source-if-exists ~/.private
 
 # . $(brew --prefix asdf)/asdf.sh
-. /usr/local/opt/asdf/libexec/asdf.sh
+. $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
 
 prepend-path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 prepend-path "$HOME/Downloads/android-ndk-r10e"

@@ -39,6 +39,8 @@
 * git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 
 * brew install go
+* brew install hub
+* brew install asdf
 * brew install --cask 1password/tap/1password-cli
 
 * Install vscode

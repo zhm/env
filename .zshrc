@@ -35,7 +35,7 @@ export FULCRUM_PERMISSIONS_CHAOS=Admin
 
 export GPG_TTY=$(tty)
 
-plugins=(git ruby rails osx fulcrum)
+plugins=(git ruby rails macos fulcrum)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.functions

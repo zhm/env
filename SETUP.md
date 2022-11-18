@@ -11,7 +11,7 @@
 
 * VSCode
 * Base
-* Alfred
+* Raycast
 * Adobe
 * Atom
 * Android Studio
@@ -33,6 +33,9 @@
 * Discord
 * Dropbox
 
+* Setup 1Password SSH agent
+* Remap caps lock to escape key in Modifier Keys
+* Modify key repeat speed to max
 * Copy public/private key
 
 * /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

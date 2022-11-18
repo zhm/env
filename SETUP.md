@@ -38,6 +38,7 @@
 * Modify key repeat speed to max
 * Adjust Display to "More Space"
 * Set dock to hide, max zoom, don't show recent apps
+* Import GPG key
 * Copy public/private key
 * Import Brave sync passphrase
 * Import zsh history

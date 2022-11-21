@@ -38,6 +38,9 @@
 * Modify key repeat speed to max
 * Import GPG key
 * Copy public/private key
+* Add iTerm to "Input Monitoring"
+* Add iTerm to "Accessibility"
+* Link history `ln -s ~/Dropbox/private/.zsh_history ~/.zsh_history`
 
 * /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 * git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh

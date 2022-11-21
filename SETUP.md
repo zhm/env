@@ -36,11 +36,15 @@
 * Setup 1Password SSH agent
 * Remap caps lock to escape key in Modifier Keys
 * Modify key repeat speed to max
+* Adjust Display to "More Space"
+* Set dock to hide, max zoom, don't show recent apps
 * Import GPG key
 * Copy public/private key
 * Add iTerm to "Input Monitoring"
 * Add iTerm to "Accessibility"
 * Link history `ln -s ~/Dropbox/private/.zsh_history ~/.zsh_history`
+* Import Brave sync passphrase
+* Import zsh history
 
 * /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 * git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh

@@ -90,9 +90,3 @@ bindkey '\C-x\C-e' edit-command-line
 
 # turn off the annoying auto-correction
 unsetopt correct_all
-
-# added by travis gem
-[ -f /Users/zacmcc/.travis/travis.sh ] && source /Users/zacmcc/.travis/travis.sh
-
-# added by travis gem
-[ -f /Users/zac/.travis/travis.sh ] && source /Users/zac/.travis/travis.sh

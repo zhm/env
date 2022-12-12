@@ -13,8 +13,11 @@ ln -sf $ENV_PATH/.gitignore ~/.gitignore
 ln -sf $ENV_PATH/.irbrc ~/.irbrc
 ln -sf $ENV_PATH/.ackrc ~/.ackrc
 ln -sf $ENV_PATH/.vimrc ~/.vimrc
-rm -f ~/.vim && ln -sf $ENV_PATH/.vim ~/.vim
+
+[ ! -d ~/.vim ] && ln -sf $ENV_PATH/.vim
+[ ! -d ~/dev ] && ln -sf ~/Documents/dev ~/dev
+
+mkdir -p ~/.vimtmp
+mkdir -p ~/.vimbackup
 
 ln -sf $ENV_PATH/zacmcc.zsh-theme ~/.oh-my-zsh/themes/zacmcc.zsh-theme
-
-ln -sf ~/Documents/dev ~/dev

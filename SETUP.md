@@ -45,6 +45,7 @@
 * Link history `ln -s ~/Dropbox/private/.zsh_history ~/.zsh_history`
 * Import Brave sync passphrase
 * Import zsh history
+* Set screenshot location `defaults write com.apple.screencapture location ~/Dropbox/screenshots`
 
 * /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 * git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh

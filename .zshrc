@@ -54,7 +54,7 @@ prepend-path "$ANDROID_SDK_PATH/platform-tools"
 prepend-path "$HOMEBREW_PREFIX/share/python"
 prepend-path "$HOMEBREW_PREFIX/sbin"
 prepend-path "$HOMEBREW_PREFIX/bin"
-prepend-path "$HOMEBREW_PREFIX/lib/ruby/gems/3.0.0/bin"
+prepend-path "$HOMEBREW_PREFIX/lib/ruby/gems/3.1.0/bin"
 prepend-path "$HOMEBREW_PREFIX/opt/python@3.9/libexec/bin"
 prepend-path "$HOMEBREW_PREFIX/opt/ruby/bin"
 prepend-path "$HOMEBREW_PREFIX/opt/qt/bin"
@@ -90,9 +90,3 @@ bindkey '\C-x\C-e' edit-command-line
 
 # turn off the annoying auto-correction
 unsetopt correct_all
-
-# added by travis gem
-[ -f /Users/zacmcc/.travis/travis.sh ] && source /Users/zacmcc/.travis/travis.sh
-
-# added by travis gem
-[ -f /Users/zac/.travis/travis.sh ] && source /Users/zac/.travis/travis.sh

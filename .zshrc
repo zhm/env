@@ -18,6 +18,7 @@ export RY_PREFIX=$HOME/local
 export PHP_PATH=$HOME/local/src/PHP5
 export GOPATH=$HOME/go
 export OCLINT_HOME=$HOME/local/oclint
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"
 # export PYTHONPATH=/usr/local/lib/python3.7/site-packages
 
 export FULCRUM_WEB=$HOME/dev/fulcrum-docker/fulcrum/rails/repo
@@ -46,9 +47,10 @@ source-if-exists ~/.aws
 source-if-exists ~/.private
 
 # . $(brew --prefix asdf)/asdf.sh
-. $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
+# . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
 
 prepend-path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# prepend-path "/Applications/Android Studio.app/Contents/jre/Contents/Home/bin"
 prepend-path "$HOME/Downloads/android-ndk-r10e"
 prepend-path "$ANDROID_SDK_PATH/platform-tools"
 prepend-path "$HOMEBREW_PREFIX/share/python"

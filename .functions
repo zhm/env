@@ -10,6 +10,13 @@ function create-bug() {
   jira issue create --web --project FLCRM --type Bug --template ~/.jira-bug.tmpl
 }
 
+pod-desc() {
+  local ns=${1:-$USER}
+  local pod=${2:-`rails-pod $ns`}
+
+  kubectl -n $ns describe pod $pod
+}
+
 function git() {
   hub "$@"
 }

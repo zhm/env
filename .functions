@@ -17,6 +17,12 @@ pod-desc() {
   kubectl -n $ns describe pod $pod
 }
 
+pod-exec() {
+  local ns=${1:-$USER}
+
+  kubectl -n $ns exec -it $2 -- ${@:3}
+}
+
 function git() {
   hub "$@"
 }

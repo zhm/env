@@ -18,9 +18,9 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-# Bundle 'wincent/Command-T'
-" Bundle 'pangloss/vim-javascript'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'wincent/Command-T'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/nerdtree'
 " Bundle 'tpope/vim-fugitive'
 " Bundle 'tpope/vim-commentary'
 " Bundle 'tpope/vim-surround'

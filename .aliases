@@ -12,8 +12,8 @@ alias back='cd $OLDPWD'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias sshfix='ssh-add --apple-load-keychain'
 alias penv='cd ~/dev/pythonenv && source .env/bin/activate'
-alias ev='cursor ~/Dropbox/dev/env'
-alias evd='cd ~/Dropbox/dev/env'
+alias ev='cursor ~/dev/env'
+alias evd='cd ~/dev/env'
 alias cl='clear'
 
 # yarn

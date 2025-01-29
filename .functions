@@ -1,5 +1,31 @@
+# function prc() {
+#   mongoose && kubectl -n fulcrum-prod exec -it `rails-sidekiq-pod fulcrum-prod` -- bundle exec rails runner "require 'pry'; pry"
+# }
+
+function get-secret() {
+  yarn dotenvx get $1 -f .env.app.$2
+}
+
+function set-secret() {
+  yarn dotenvx set $1 $2 -f .env.app.$3
+}
+
+function n() {
+  local args=("$@")
+
+  if [[ -f "bun.lock" ]]; then
+    bun --bun --silent "${args[@]}"
+  elif [[ -f "pnpm-lock.yaml" ]]; then
+    pnpm "${args[@]}"
+  elif [[ -f "yarn.lock" ]]; then
+    yarn "${args[@]}"
+  else
+    npm "${args[@]}"
+  fi
+}
+
 function prc() {
-  mongoose && kubectl -n fulcrum-prod exec -it `rails-sidekiq-pod fulcrum-prod` -- bundle exec rails runner "require 'pry'; pry"
+  mongoose && kubectl -n fulcrum-prod exec -it `rails-migrations-pod fulcrum-prod` -- bundle exec rails runner "require 'pry'; pry"
 }
 
 function prconsole() {
@@ -10,11 +36,21 @@ function create-bug() {
   jira issue create --web --project FLCRM --type Bug --template ~/.jira-bug.tmpl
 }
 
+build-base-images() {
+  skaffold build --platform=linux/amd64,linux/arm64 -p base --cache-artifacts=false
+}
+
 pod-desc() {
   local ns=${1:-$USER}
   local pod=${2:-`rails-pod $ns`}
 
   kubectl -n $ns describe pod $pod
+}
+
+pod-exec() {
+  local ns=${1:-$USER}
+
+  kubectl -n $ns exec -it $2 -- ${@:3}
 }
 
 function git() {
@@ -198,6 +234,11 @@ function zipr() {
 #   port="${1:-3000}"
 #   ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => $port, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start"
 # }
+
+function rails-migrations-pod() {
+	local ns=${1:-$USER}
+	kubectl get pods --namespace $ns --no-headers --output jsonpath='{.items[0].metadata.name}' --selector 'app.kubernetes.io/instance in (rails, fulcrum-rails),app.kubernetes.io/name=fulcrum-sidekiq,app.kubernetes.io/managed-by!=EventListener,sidekiq in (migrations-stable, all)' --field-selector status.phase=Running
+}
 
 function unlocal {
   username=`whoami`
